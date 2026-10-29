@@ -1,0 +1,166 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: #e5e7eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.todo-container {
+    width: 100%;
+    max-width: 520px;
+    background: #111827;
+    border: 1px solid #263449;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px #00000040;
+}
+
+h1 {
+    color: #60a5fa;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #9ca3af;
+    margin-bottom: 25px;
+}
+
+#todo-form {
+    display: flex;
+    gap: 10px;
+}
+
+#todo-input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    background: #0b1120;
+    color: white;
+    font-size: 15px;
+}
+
+button {
+    padding: 12px 16px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+#task-count {
+    color: #9ca3af;
+    font-size: 14px;
+    margin: 20px 0 12px;
+}
+
+#todo-list {
+    list-style: none;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #1e293b;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.todo-item input {
+    accent-color: #3b82f6;
+    width: 17px;
+    height: 17px;
+}
+
+.todo-text {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+.delete-btn {
+    background: #dc2626;
+    padding: 8px 10px;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+.footer {
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+@media (max-width: 420px) {
+    .todo-container {
+        padding: 20px;
+    }
+
+    #todo-form {
+        flex-direction: column;
+    }
+}
+
+.edit-btn {
+    background: #256d5a;
+    padding: 8px 10px;
+}
+
+.edit-btn:hover {
+    background: #16805f;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.filter-btn {
+    flex: 1;
+    padding: 10px;
+    background: #1e293b;
+    border: 1px solid #374151;
+}
+
+.filter-btn.active {
+    background: #2563eb;
+    border-color: #3b82f6;
+}
+
+@media (max-width: 360px) {
+    .filters {
+        gap: 5px;
+    }
+
+    .filter-btn {
+        padding: 8px 5px;
+        font-size: 12px;
+    }
+}
